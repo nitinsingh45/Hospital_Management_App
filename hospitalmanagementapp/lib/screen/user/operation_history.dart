@@ -23,7 +23,7 @@ class _UserOperationHistoryState extends State<UserOperationHistory> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: Text('Operation History'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

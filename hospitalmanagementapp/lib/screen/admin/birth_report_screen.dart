@@ -16,7 +16,7 @@ class _BirthReportScreenState extends State<BirthReportScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Birth Report'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: birthReports.length,
@@ -61,7 +61,7 @@ class _BirthReportScreenState extends State<BirthReportScreen> {
           _addBirthReport(context);
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: const Color.fromARGB(255, 51, 70, 78),
       ),
     );
   }

@@ -104,7 +104,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                   return Padding(
                     padding: EdgeInsets.symmetric(vertical: 16.0),
                     child: Material(
-                      color: Colors.blueAccent,
+                      color: Color.fromARGB(255, 50, 79, 130),
                       borderRadius: BorderRadius.all(Radius.circular(30.0)),
                       elevation: 5.0,
                       child: MaterialButton(

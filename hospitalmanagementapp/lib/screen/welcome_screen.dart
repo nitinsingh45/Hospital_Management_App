@@ -31,7 +31,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                   Text(
                     'Hospital Management',
                     style: TextStyle(
-                      color: Colors.blue,
+                      color: Color(0xFF0D3847),
                       fontSize: 25.0,
                       fontWeight: FontWeight.w900,
                     ),
@@ -88,7 +88,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               padding: EdgeInsets.symmetric(vertical: 8.0),
               child: Material(
                 elevation: 5.0,
-                color: Colors.lightBlueAccent,
+                color: Color.fromARGB(255, 18, 112, 156),
                 borderRadius: BorderRadius.circular(20.0),
                 child: MaterialButton(
                   onPressed: () {
@@ -110,7 +110,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             Padding(
               padding: EdgeInsets.symmetric(vertical: 8.0),
               child: Material(
-                color: Colors.blueAccent,
+                color: Color.fromARGB(255, 50, 79, 130),
                 borderRadius: BorderRadius.circular(20.0),
                 elevation: 5.0,
                 child: MaterialButton(

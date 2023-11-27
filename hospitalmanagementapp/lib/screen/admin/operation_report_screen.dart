@@ -40,7 +40,7 @@ class _OperationReportState extends State<OperationReport> {
       context: context,
       builder: (context) {
         return Dialog(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: const Color.fromARGB(255, 43, 46, 48),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(10.0),
           ),
@@ -138,7 +138,7 @@ class _OperationReportState extends State<OperationReport> {
       context: context,
       builder: (context) {
         return Dialog(
-          backgroundColor: Colors.lightBlue,
+          backgroundColor: const Color.fromARGB(255, 51, 58, 61),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(20.0),
           ),
@@ -229,7 +229,7 @@ class _OperationReportState extends State<OperationReport> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Operation Report'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: patientReports.length,
@@ -285,7 +285,7 @@ class _OperationReportState extends State<OperationReport> {
       floatingActionButton: FloatingActionButton(
         onPressed: _addReport,
         child: Icon(Icons.add),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: const Color.fromARGB(255, 44, 63, 71),
       ),
     );
   }

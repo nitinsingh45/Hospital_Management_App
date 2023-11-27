@@ -21,7 +21,7 @@ class _PharmacistMedicineStockState extends State<PharmacistMedicineStock> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Medicine Stock'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -53,6 +53,10 @@ class _PharmacistMedicineStockState extends State<PharmacistMedicineStock> {
                 _updateStock();
               },
               child: Text('Update Stock'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    Color.fromARGB(255, 33, 59, 83)),
+              ),
             ),
           ],
         ),

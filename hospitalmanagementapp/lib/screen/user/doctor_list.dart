@@ -50,7 +50,7 @@ class _DoctorListScreenState extends State<DoctorListScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Doctor List'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: doctors.length,

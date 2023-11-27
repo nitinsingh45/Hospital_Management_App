@@ -16,7 +16,7 @@ class _NurseAllotBedState extends State<NurseAllotBed> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Allot Bed'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: _bedStatus.length,

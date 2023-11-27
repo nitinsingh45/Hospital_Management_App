@@ -22,7 +22,7 @@ class _UserAdmitHistoryState extends State<UserAdmitHistory> {
       backgroundColor: Colors.grey[200],
       appBar: AppBar(
         title: Text('Admit History'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),

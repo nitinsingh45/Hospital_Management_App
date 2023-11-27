@@ -24,7 +24,7 @@ class _NurseBloodBankState extends State<NurseBloodBank> {
       appBar: AppBar(
         title: Text('Blood Bank',
             style: TextStyle(color: Colors.black)), // Set text color to black
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: bloodGroups.length,
@@ -37,7 +37,7 @@ class _NurseBloodBankState extends State<NurseBloodBank> {
           _showAddBloodDialog(context);
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
     );
   }

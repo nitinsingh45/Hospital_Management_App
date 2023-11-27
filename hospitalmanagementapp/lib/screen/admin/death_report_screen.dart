@@ -19,7 +19,7 @@ class _DeathReportScreenState extends State<DeathReportScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Death Report'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: SingleChildScrollView(
         child: Padding(

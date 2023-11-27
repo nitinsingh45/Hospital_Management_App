@@ -28,7 +28,7 @@ class _LaboratoristPrescriptionState extends State<LaboratoristPrescription> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Prescription List'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
         actions: [
           IconButton(
             icon: Icon(Icons.add),
@@ -99,20 +99,22 @@ class AddPrescriptionScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Add Prescription'),
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
             TextField(
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: const Color.fromARGB(255, 6, 6, 6)),
               controller: testNameController,
               decoration: InputDecoration(labelText: 'Test Name'),
             ),
             TextField(
-              style: TextStyle(color: Colors.white),
+              style: TextStyle(color: const Color.fromARGB(255, 0, 0, 0)),
               controller: patientNameController,
               decoration: InputDecoration(labelText: 'Patient Name'),
             ),

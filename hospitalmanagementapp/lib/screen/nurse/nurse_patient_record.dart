@@ -21,7 +21,7 @@ class _NursePatientRecordState extends State<NursePatientRecord> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Patient Record'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: patientRecords.length,

@@ -20,7 +20,7 @@ class _MedicineStatusState extends State<MedicineStatus> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Medicine Status'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: medicineList.length,
@@ -48,7 +48,7 @@ class _MedicineStatusState extends State<MedicineStatus> {
           _showAddMedicineDialog();
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 29, 47, 58),
       ),
     );
   }

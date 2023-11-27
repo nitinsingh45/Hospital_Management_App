@@ -24,7 +24,7 @@ class _DoctorManageAppointmentState extends State<DoctorManageAppointment> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Manage Appointment'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -55,7 +55,7 @@ class _DoctorManageAppointmentState extends State<DoctorManageAppointment> {
           _showAddAppointmentDialog(context);
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
     );
   }

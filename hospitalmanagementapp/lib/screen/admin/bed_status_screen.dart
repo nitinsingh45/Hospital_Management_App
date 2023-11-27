@@ -28,7 +28,7 @@ class _BedStatusScreenState extends State<BedStatusScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Bed Status', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Column(
         children: [
@@ -58,7 +58,7 @@ class _BedStatusScreenState extends State<BedStatusScreen> {
             children: [
               ElevatedButton(
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.lightBlue,
+                  primary: const Color.fromARGB(255, 44, 68, 79),
                   onPrimary: Colors.white,
                 ),
                 onPressed: () {

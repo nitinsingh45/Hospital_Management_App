@@ -19,7 +19,7 @@ class _PharmacistMedicationState extends State<PharmacistMedication> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Medication'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -83,6 +83,10 @@ class _PharmacistMedicationState extends State<PharmacistMedication> {
                 }
               },
               child: Text('Create Prescription'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    Color.fromARGB(255, 33, 59, 83)),
+              ),
             ),
           ],
         ),

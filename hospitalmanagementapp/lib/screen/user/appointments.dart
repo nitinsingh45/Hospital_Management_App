@@ -27,7 +27,7 @@ class _ShowAppointmentScreenState extends State<ShowAppointmentScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Appointments'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: SingleChildScrollView(
         child: Center(
@@ -130,6 +130,11 @@ class _ShowAppointmentScreenState extends State<ShowAppointmentScreen> {
                     // Implement appointment scheduling logic here
                   },
                   child: Text('Schedule Appointment'),
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all<Color>(
+                      const Color.fromARGB(255, 13, 56, 71),
+                    ), // Change the color here
+                  ),
                 ),
               ],
             ),

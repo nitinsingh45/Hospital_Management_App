@@ -37,12 +37,12 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
       backgroundColor: Colors.blue[100],
       appBar: AppBar(
         title: Text('Appointments'),
-        backgroundColor: Colors.blue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Column(
         children: <Widget>[
           Container(
-            color: Colors.blue,
+            color: const Color.fromARGB(255, 52, 53, 54),
             padding: const EdgeInsets.all(16.0),
             child: Column(
               children: <Widget>[
@@ -75,7 +75,8 @@ class _AppointmentScreenState extends State<AppointmentScreen> {
                 SizedBox(height: 10),
                 ElevatedButton(
                   style: ButtonStyle(
-                    backgroundColor: MaterialStateProperty.all(Colors.blue),
+                    backgroundColor: MaterialStateProperty.all(
+                        const Color.fromARGB(255, 49, 82, 108)),
                   ),
                   onPressed: () {
                     final name = nameController.text;

@@ -23,8 +23,10 @@ class _BloodBankScreenState extends State<BloodBankScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Blood Bank',
-            style: TextStyle(color: Colors.black)), // Set text color to black
-        backgroundColor: Colors.lightBlue,
+            style: TextStyle(
+                color: const Color.fromARGB(
+                    255, 255, 255, 255))), // Set text color to black
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: bloodGroups.length,
@@ -37,7 +39,7 @@ class _BloodBankScreenState extends State<BloodBankScreen> {
           _showAddBloodDialog(context);
         },
         child: Icon(Icons.add),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: const Color.fromARGB(255, 34, 46, 52),
       ),
     );
   }

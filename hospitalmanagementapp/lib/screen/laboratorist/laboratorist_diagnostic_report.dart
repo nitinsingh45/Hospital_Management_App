@@ -25,7 +25,7 @@ class _LaboratoristDiagnosticReportState
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Diagnostic Report'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -124,8 +124,8 @@ class _LaboratoristDiagnosticReportState
               child: Text('Add Report', style: TextStyle(color: Colors.white)),
             ),
           ],
-          backgroundColor:
-              Colors.lightBlue, // Set the background color of the dialog
+          backgroundColor: Color.fromARGB(
+              255, 51, 54, 55), // Set the background color of the dialog
         );
       },
     );

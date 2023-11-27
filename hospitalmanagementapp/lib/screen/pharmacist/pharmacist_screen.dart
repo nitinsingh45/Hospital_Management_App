@@ -17,72 +17,108 @@ class _PharmacistScreenState extends State<PharmacistScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar:
-          AppBar(title: Text('Pharmacist'), backgroundColor: Colors.lightBlue),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      appBar: AppBar(
+        title: Text('Pharmacist Dashboard'),
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
+      ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: GridView.count(
-            crossAxisCount: 2,
-            children: <Widget>[
-              CustomCard(
-                title: 'Profile',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PharmacistProfile()));
-                },
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Container(
+                height: 170,
+                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 253, 254, 255),
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
+                    ),
+                  ],
+                  image: DecorationImage(
+                    image: AssetImage('images/adminBanner.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
               ),
-              CustomCard(
-                title: 'Maintain medicine',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PharmacistMaintainMedicine()));
-                },
+            ),
+            SliverFillRemaining(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 16.0,
+                  mainAxisSpacing: 16.0,
+                  children: <Widget>[
+                    CustomCard(
+                      title: 'Profile',
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PharmacistProfile()));
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Maintain medicine',
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    PharmacistMaintainMedicine()));
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Medicine stock',
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    PharmacistMedicineStock()));
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Medicine categories',
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    PharmacistMedicineCategories()));
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Prescription',
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) =>
+                                    PharmacistPrescription()));
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Medication',
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PharmacistMedication()));
+                      },
+                    ),
+                  ],
+                ),
               ),
-              CustomCard(
-                title: 'Medicine stock',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PharmacistMedicineStock()));
-                },
-              ),
-              CustomCard(
-                title: 'Medicine categories',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              PharmacistMedicineCategories()));
-                },
-              ),
-              CustomCard(
-                title: 'Prescription',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PharmacistPrescription()));
-                },
-              ),
-              CustomCard(
-                title: 'Medication',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => PharmacistMedication()));
-                },
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -95,37 +131,27 @@ class CustomCard extends StatelessWidget {
 
   CustomCard({required this.title, required this.onPressed});
 
-  // Define a mapping from titles to icons
-  // Updated mapping from titles to icons
+  // Define a static map for title to icon
   static const Map<String, IconData> titleToIcon = {
-    'Profile': Icons.business,
-    'Maintain medicine': Icons.medical_information_outlined,
-    'Medicine stock': Icons.medical_information_sharp,
-    'Medicine categories': Icons.category,
-    'Prescription': Icons.support,
-    'Medication': Icons.medical_services_rounded,
+    'Profile': Icons.person,
+    'Create invoice': Icons.description,
+    'Take cash': Icons.attach_money,
+    'Payment history': Icons.history,
   };
 
   @override
   Widget build(BuildContext context) {
-    IconData? icon = titleToIcon[title];
+    IconData? icon = titleToIcon[title]; // Access the map using the class name
 
-    return Card(
-      elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+    return InkWell(
+      onTap: onPressed,
       child: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Colors.lightBlueAccent, Colors.blue],
-          ),
           borderRadius: BorderRadius.circular(12),
+          color: Color(0xFF286689),
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: Colors.grey.withOpacity(0.3),
               spreadRadius: 2,
               blurRadius: 5,
               offset: Offset(0, 3),
@@ -137,7 +163,7 @@ class CustomCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(
-              icon ?? Icons.business, // Use the mapped icon or a default icon
+              icon ?? Icons.business,
               color: Colors.white,
               size: 40,
             ),
@@ -146,7 +172,7 @@ class CustomCard extends StatelessWidget {
               title,
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 16,
+                fontSize: 14,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -155,15 +181,17 @@ class CustomCard extends StatelessWidget {
               onPressed: onPressed,
               child: Text(
                 'Open',
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
                 overflow: TextOverflow.ellipsis,
               ),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.white),
                 textStyle: MaterialStateProperty.all(
                   TextStyle(
-                    color: Colors.blue,
+                    color: Color(0xFF286689),
                     fontWeight: FontWeight.bold,
                   ),
                 ),

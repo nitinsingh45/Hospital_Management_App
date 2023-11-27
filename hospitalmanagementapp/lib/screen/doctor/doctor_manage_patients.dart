@@ -21,8 +21,9 @@ class _DoctorManagePatientState extends State<DoctorManagePatient> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Manage Patients'),
-        backgroundColor:
-            Colors.lightBlue, // Set the app bar color to light blue
+
+        backgroundColor: Color.fromARGB(
+            255, 13, 56, 71), // Set the app bar color to light blue
       ),
       body: ListView.builder(
         itemCount: patients.length,

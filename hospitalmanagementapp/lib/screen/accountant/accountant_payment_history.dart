@@ -18,7 +18,7 @@ class _AccountantPaymentHistoryState extends State<AccountantPaymentHistory> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Payment History'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: ListView.builder(
         itemCount: paymentHistory.length,

@@ -36,7 +36,7 @@ class _LaboratoristReportFilesState extends State<LaboratoristReportFiles> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Report Files'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: SingleChildScrollView(
         child: Padding(

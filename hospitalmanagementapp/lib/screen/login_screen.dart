@@ -162,7 +162,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   return Padding(
                     padding: EdgeInsets.symmetric(vertical: 16.0),
                     child: Material(
-                      color: Colors.lightBlueAccent,
+                      color: Color.fromARGB(255, 18, 112, 156),
                       borderRadius: BorderRadius.all(Radius.circular(30.0)),
                       elevation: 5.0,
                       child: MaterialButton(

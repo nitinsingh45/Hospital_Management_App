@@ -22,7 +22,7 @@ class _UserProfileState extends State<UserProfile> {
       backgroundColor: Color.fromARGB(255, 255, 255, 255),
       appBar: AppBar(
         title: Text('Profile'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.edit),
@@ -181,7 +181,7 @@ class _EditProfileState extends State<EditProfile> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Edit Profile'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: SingleChildScrollView(
         child: Padding(

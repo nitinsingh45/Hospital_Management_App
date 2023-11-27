@@ -20,7 +20,7 @@ class _DiagnosisReportScreenState extends State<DiagnosisReportScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Diagnosis Report'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: SingleChildScrollView(
         child: Padding(

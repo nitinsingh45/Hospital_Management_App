@@ -24,7 +24,7 @@ class _PharmacistMaintainMedicineState
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Maintain Medicine'),
-        backgroundColor: Colors.lightBlue,
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -53,6 +53,10 @@ class _PharmacistMaintainMedicineState
                 _addMedicine();
               },
               child: Text('Add Medicine'),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all<Color>(
+                    Color.fromARGB(255, 33, 59, 83)),
+              ),
             ),
             SizedBox(height: 16),
             Expanded(

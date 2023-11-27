@@ -19,121 +19,132 @@ class _AdminScreenState extends State<AdminScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(title: Text('Admin'), backgroundColor: Colors.lightBlue),
+      backgroundColor: Color.fromARGB(255, 255, 255, 255),
+      appBar: AppBar(
+        title: Text('Admin Dashboard'),
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
+      ),
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.only(top: 8.0),
-          child: GridView.count(
-            crossAxisCount: 2,
-            children: <Widget>[
-              CustomCard(
-                title: 'Department',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => DepartmentScreen(),
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+              child: Container(
+                height: 170,
+                margin: EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 253, 254, 255),
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.3),
+                      spreadRadius: 2,
+                      blurRadius: 5,
+                      offset: Offset(0, 3),
                     ),
-                  );
-                },
-              ),
-              CustomCard(
-                title: 'Appointment',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => AppointmentScreen(),
+                  ],
+                  image: DecorationImage(
+                    image: AssetImage('images/adminBanner.png'),
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 24,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
-                  );
-                },
+                  ],
+                ),
               ),
-              CustomCard(
-                title: 'Transaction',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => TransactionScreen(),
+            ),
+            SliverFillRemaining(
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: GridView.count(
+                  shrinkWrap: true,
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 16.0,
+                  mainAxisSpacing: 16.0,
+                  children: <Widget>[
+                    CustomCard(
+                      title: 'Department',
+                      onPressed: () {
+                        navigateToScreen(DepartmentScreen());
+                      },
                     ),
-                  );
-                },
-              ),
-              CustomCard(
-                title: 'Bed status',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => BedStatusScreen(),
+                    CustomCard(
+                      title: 'Appointment',
+                      onPressed: () {
+                        navigateToScreen(AppointmentScreen());
+                      },
                     ),
-                  );
-                },
-              ),
-              CustomCard(
-                title: 'Blood bank',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => BloodBankScreen(),
+                    CustomCard(
+                      title: 'Transaction',
+                      onPressed: () {
+                        navigateToScreen(TransactionScreen());
+                      },
                     ),
-                  );
-                },
-              ),
-              CustomCard(
-                title: 'Medicine status',
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => MedicineStatus(),
+                    CustomCard(
+                      title: 'Bed Status',
+                      onPressed: () {
+                        navigateToScreen(BedStatusScreen());
+                      },
                     ),
-                  );
-                },
+                    CustomCard(
+                      title: 'Blood Bank',
+                      onPressed: () {
+                        navigateToScreen(BloodBankScreen());
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Medicine Status',
+                      onPressed: () {
+                        navigateToScreen(MedicineStatus());
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Operation Report',
+                      onPressed: () {
+                        navigateToScreen(OperationReport());
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Birth Report',
+                      onPressed: () {
+                        navigateToScreen(BirthReportScreen());
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Diagnosis Report',
+                      onPressed: () {
+                        navigateToScreen(DiagnosisReportScreen());
+                      },
+                    ),
+                    CustomCard(
+                      title: 'Death Report',
+                      onPressed: () {
+                        navigateToScreen(DeathReportScreen());
+                      },
+                    ),
+                  ],
+                ),
               ),
-              CustomCard(
-                title: 'Operation Report',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => OperationReport(),
-                      ));
-                },
-              ),
-              CustomCard(
-                title: 'Birth Report',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => BirthReportScreen()));
-                },
-              ),
-              CustomCard(
-                title: 'Diagnosis Report',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => DiagnosisReportScreen()));
-                },
-              ),
-              CustomCard(
-                title: 'Death Report',
-                onPressed: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => DeathReportScreen()));
-                },
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
+    );
+  }
+
+  void navigateToScreen(Widget screen) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(builder: (context) => screen),
     );
   }
 }
@@ -144,14 +155,13 @@ class CustomCard extends StatelessWidget {
 
   CustomCard({required this.title, required this.onPressed});
 
-  // Define a mapping from titles to icons
   static const Map<String, IconData> titleToIcon = {
     'Department': Icons.business,
     'Appointment': Icons.calendar_today,
     'Transaction': Icons.attach_money,
-    'Bed status': Icons.hotel,
-    'Blood bank': Icons.local_hospital,
-    'Medicine status': Icons.medical_services,
+    'Bed Status': Icons.hotel,
+    'Blood Bank': Icons.local_hospital,
+    'Medicine Status': Icons.medical_services,
     'Operation Report': Icons.report,
     'Birth Report': Icons.child_friendly,
     'Diagnosis Report': Icons.healing,
@@ -162,22 +172,15 @@ class CustomCard extends StatelessWidget {
   Widget build(BuildContext context) {
     IconData? icon = titleToIcon[title];
 
-    return Card(
-      elevation: 4,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(12),
-      ),
+    return InkWell(
+      onTap: onPressed,
       child: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Colors.lightBlueAccent, Colors.blue],
-          ),
           borderRadius: BorderRadius.circular(12),
+          color: Color(0xFF286689), // Convert RGB to Flutter color code
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.5),
+              color: Colors.grey.withOpacity(0.3),
               spreadRadius: 2,
               blurRadius: 5,
               offset: Offset(0, 3),
@@ -189,7 +192,7 @@ class CustomCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(
-              icon ?? Icons.business, // Use the mapped icon or a default icon
+              icon ?? Icons.business,
               color: Colors.white,
               size: 40,
             ),
@@ -207,14 +210,18 @@ class CustomCard extends StatelessWidget {
               onPressed: onPressed,
               child: Text(
                 'Open',
-                style:
-                    TextStyle(color: Colors.black, fontWeight: FontWeight.bold),
+                style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                ),
+                overflow: TextOverflow.ellipsis,
               ),
               style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.white),
                 textStyle: MaterialStateProperty.all(
                   TextStyle(
-                    color: Colors.blue,
+                    color:
+                        Color(0xFF286689), // Convert RGB to Flutter color code
                     fontWeight: FontWeight.bold,
                   ),
                 ),

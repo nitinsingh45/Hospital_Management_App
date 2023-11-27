@@ -24,8 +24,7 @@ class _UserBloodBankScreenState extends State<UserBloodBankScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text('Blood Bank'),
-        backgroundColor:
-            Colors.lightBlue, // Change the color based on your design
+        backgroundColor: Color.fromARGB(255, 13, 56, 71),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
